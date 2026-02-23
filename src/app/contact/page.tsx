@@ -23,7 +23,7 @@ export default function ContactPage() {
             UAE Office
           </h2>
           <p>Innovative Technical Solutions (Itechsol)</p>
-          <p>Dubai, United Arab Emirates</p>
+          <p>Abu Dhabi, United Arab Emirates</p>
           <p>
             Phone:{" "}
             <a className="text-teal-700 underline" href="tel:+97140000000">
@@ -93,7 +93,7 @@ export default function ContactPage() {
       <article className="card-shell mt-8 overflow-hidden">
         <iframe
           title="Itechsol office location map"
-          src="https://www.google.com/maps?q=Dubai%20UAE&output=embed"
+          src="https://www.google.com/maps?q=Abu%20Dhabi%20UAE&output=embed"
           className="h-[360px] w-full border-0"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
