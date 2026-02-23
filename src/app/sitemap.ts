@@ -3,7 +3,14 @@ import type { MetadataRoute } from "next";
 const baseUrl = "https://itechsol.ae";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/about", "/solutions", "/projects", "/contact"];
+  const routes = [
+    "",
+    "/about",
+    "/solutions",
+    "/projects",
+    "/capability-statement",
+    "/contact",
+  ];
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,

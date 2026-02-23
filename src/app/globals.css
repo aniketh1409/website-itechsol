@@ -205,6 +205,10 @@ a {
   position: relative;
 }
 
+.capability-page {
+  break-inside: avoid;
+}
+
 .grid-dot-bg::before {
   content: "";
   position: absolute;
@@ -239,5 +243,29 @@ textarea:focus {
   .section-shell {
     padding-top: 3.4rem;
     padding-bottom: 3.4rem;
+  }
+}
+
+@media print {
+  .site-header,
+  .footer-shell,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .site-shell {
+    background: #fff;
+  }
+
+  .section-shell {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .capability-page {
+    break-after: page;
+    box-shadow: none;
+    border: 1px solid #d0d7de;
+    margin-top: 1rem;
   }
 }
