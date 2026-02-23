@@ -26,8 +26,8 @@ export default function ContactPage() {
           <p>Abu Dhabi, United Arab Emirates</p>
           <p>
             Phone:{" "}
-            <a className="text-teal-700 underline" href="tel:+97140000000">
-              +971 4 000 0000
+            <a className="text-teal-700 underline" href="tel:+97120000000">
+              +971 2 000 0000
             </a>
           </p>
           <p>
@@ -38,7 +38,7 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-wrap gap-3 pt-2">
             <a
-              href="https://wa.me/97140000000"
+              href="https://wa.me/97120000000"
               target="_blank"
               rel="noreferrer"
               className="btn-primary"
