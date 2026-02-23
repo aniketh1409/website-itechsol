@@ -35,9 +35,9 @@ export function SiteFooter() {
         </div>
         <div className="space-y-3 text-sm text-slate-300">
           <p className="footer-kicker">Reach Us</p>
-          <p>UAE Office, Dubai</p>
-          <a href="tel:+97140000000" className="footer-link">
-            +971 4 000 0000
+          <p>UAE Office, Abu Dhabi</p>
+          <a href="tel:+97120000000" className="footer-link">
+            +971 2 000 0000
           </a>
           <a href="mailto:info@itechsol.ae" className="footer-link">
             info@itechsol.ae
