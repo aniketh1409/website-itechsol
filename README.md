@@ -2,7 +2,7 @@
 
 Small lowkey company site for Itechsol.
 
-## Run locally
+## Run locally 
 
 ```bash
 npm install
@@ -10,6 +10,8 @@ npm run dev
 ```
 
 Open `http://localhost:3000`.
+
+**NOTE: DEPLOYED**
 
 ## Notes
 
