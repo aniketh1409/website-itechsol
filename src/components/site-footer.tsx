@@ -21,7 +21,7 @@ export function SiteFooter() {
             intelligent systems that strengthen control, enhance security, and
             empower organizations to operate with confidence.
           </p>
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-300">
+          <p className="text-sm font-semibold tracking-[0.04em] text-teal-300">
             Smart Systems. Secure Operations. Visible Control.
           </p>
         </div>
@@ -35,17 +35,17 @@ export function SiteFooter() {
         </div>
         <div className="space-y-3 text-sm text-slate-300">
           <p className="footer-kicker">Reach Us</p>
-          <p>UAE Office, Abu Dhabi</p>
-          <a href="tel:+97120000000" className="footer-link">
-            +971 2 000 0000
+          <p>UAE Office, Dubai</p>
+          <a href="tel:+97140000000" className="footer-link">
+            +971 4 000 0000
           </a>
-          <a href="mailto:info@itechsol.ae" className="footer-link">
-            info@itechsol.ae
+          <a href="mailto:info@itechsol-meai.com" className="footer-link">
+            info@itechsol-meai.com
           </a>
         </div>
       </div>
       <div className="border-t border-white/10 py-4 text-center text-xs tracking-[0.12em] text-slate-400">
-        © {year} Itechsol. All rights reserved.
+        (c) {year} Itechsol. All rights reserved.
       </div>
     </footer>
   );

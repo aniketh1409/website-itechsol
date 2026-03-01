@@ -17,7 +17,7 @@ export function SiteHeader() {
           Itechsol
           <span>Innovative Technical Solutions</span>
         </Link>
-        <nav className="flex flex-wrap items-center gap-1 text-sm font-semibold uppercase tracking-[0.14em]">
+        <nav className="flex flex-wrap items-center gap-1 text-sm font-semibold tracking-[0.03em]">
           {navItems.map((item) => (
             <Link key={item.href} href={item.href} className="nav-link">
               {item.label}

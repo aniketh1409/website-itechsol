@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/section-heading";
 
@@ -10,22 +11,22 @@ const solutionSnapshot = [
   {
     title: "Industrial Smart Locking Solutions",
     description:
-      "Secure infrastructure and facilities in harsh and hazardous environments.",
+      "Secure infrastructure and facilities with intelligent locking for harsh and hazardous environments.",
   },
   {
     title: "Intelligent Access Management Solutions",
     description:
-      "Secure data centres, facilities, and racks with intelligent access controls.",
+      "Secure data centres, facilities, and racks with intelligent access solutions.",
   },
   {
-    title: "Intelligent Key & Card Management Solutions",
+    title: "Intelligent Key and Card Management Solutions",
     description:
-      "Digitally controlled systems to eliminate unauthorized access and automate key/card operations.",
+      "Digitally controlled systems that eliminate unauthorized access and automate key and card management.",
   },
 ];
 
 const industries = [
-  "Process Industries (Oil and Gas, Gas Processing, Petrochemical, Refining and Distribution)",
+  "Process industries (Oil and Gas, Gas Processing, Petrochemical, Refining and Multi-Product Pipelines and Distribution)",
   "EPC and Infrastructure Projects",
   "Process and Manufacturing Industries",
   "Power, Utilities and Energy Facilities",
@@ -46,20 +47,21 @@ export default function Home() {
   return (
     <>
       <section className="hero-glow">
-        <div className="section-shell grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div className="section-shell grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="space-y-6">
-            <p className="section-eyebrow">Engineering Control Infrastructure</p>
+            <p className="section-eyebrow">Engineered industrial control</p>
             <h1 className="section-title text-[clamp(2.1rem,6vw,4rem)] leading-[0.95]">
-              Engineering Intelligent Control for Critical &amp; Demanding
-              Operations
+              Engineered and intelligent control systems and solutions for
+              critical and demanding environment and applications
             </h1>
             <p className="max-w-3xl text-lg leading-8 text-slate-700">
-              Smart Asset Tracking Solutions • Industrial Locking Solutions •
-              Intelligent Access Management Solutions • Innovative Key &amp;
-              Card Management Solutions
+              Smart Asset Tracking Solutions &bull; Industrial Locking Solutions
+              &bull; Intelligent Access Management Solutions &bull; Innovative
+              Key and Card Management Solutions
             </p>
-            <p className="text-base font-semibold uppercase tracking-[0.18em] text-teal-700">
-              Smart Systems. Secure Operations. Visible Control.
+            <p className="text-base font-semibold tracking-[0.04em] text-teal-700">
+              Smart Systems. Engineered Solutions. Visible Control. Secure
+              Operations.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact#enquiry" className="btn-primary">
@@ -70,27 +72,26 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="surface-panel grid gap-4 p-6 text-sm text-slate-100">
-            <p className="section-eyebrow text-teal-200">Live Operations View</p>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <div className="rounded-xl border border-white/20 bg-white/5 p-4">
-                <p className="text-xs uppercase tracking-[0.12em] text-slate-300">
-                  Smart Locks
+
+          <div className="surface-panel overflow-hidden p-3">
+            <div className="relative h-[360px] overflow-hidden rounded-xl">
+              <Image
+                src="/images/industrial-plant.jpg"
+                alt="Industrial refinery with digital overlay concept"
+                fill
+                priority
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/20 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 grid gap-2 sm:grid-cols-3">
+                <p className="rounded-lg border border-white/25 bg-slate-900/55 px-3 py-2 text-xs text-white">
+                  Smart locks
                 </p>
-                <p className="mt-2 font-semibold">412 Active Access Points</p>
-              </div>
-              <div className="rounded-xl border border-white/20 bg-white/5 p-4">
-                <p className="text-xs uppercase tracking-[0.12em] text-slate-300">
-                  RFID Tracking
+                <p className="rounded-lg border border-white/25 bg-slate-900/55 px-3 py-2 text-xs text-white">
+                  RFID tracking
                 </p>
-                <p className="mt-2 font-semibold">98.6% Traceability Coverage</p>
-              </div>
-              <div className="rounded-xl border border-white/20 bg-white/5 p-4 sm:col-span-2">
-                <p className="text-xs uppercase tracking-[0.12em] text-slate-300">
-                  Control Dashboard
-                </p>
-                <p className="mt-2 font-semibold">
-                  Real-time monitoring for plants, data centres, and EPC sites.
+                <p className="rounded-lg border border-white/25 bg-slate-900/55 px-3 py-2 text-xs text-white">
+                  Dashboard visibility
                 </p>
               </div>
             </div>
@@ -101,8 +102,8 @@ export default function Home() {
       <section className="section-shell">
         <SectionHeading
           eyebrow="About Itechsol"
-          title="Customized Intelligent Systems for Safety, Security, and Operational Visibility"
-          description="Itechsol delivers customized, smart, and intelligent systems that enhance safety, security, visibility, and operational efficiency. Serving various industries, contractors, and customers, our solutions integrate seamlessly into operations to provide measurable value and control."
+          title="Customized intelligent systems for safety, security, visibility, and operational efficiency"
+          description="Itechsol (Innovative Technical Solutions) delivers customized, smart, and intelligent systems that enhance safety, security, visibility, and operational efficiency. Serving various industries, contractors, and customers, our solutions integrate seamlessly into operations to provide measurable value and control."
         />
         <div className="mt-8">
           <Link href="/about" className="btn-secondary">
@@ -113,13 +114,13 @@ export default function Home() {
 
       <section className="section-shell pt-0">
         <SectionHeading
-          eyebrow="Our Solutions"
-          title="Integrated Platforms to Control Assets, Access, and Infrastructure"
+          eyebrow="Our solutions"
+          title="Smart systems for asset traceability, locking, access control, and key governance"
         />
         <div className="mt-8 grid gap-5 md:grid-cols-2">
           {solutionSnapshot.map((item) => (
             <article key={item.title} className="card-shell p-6">
-              <h3 className="font-rajdhani text-2xl font-bold uppercase leading-tight text-slate-900">
+              <h3 className="font-rajdhani text-2xl font-bold leading-tight text-slate-900">
                 {item.title}
               </h3>
               <p className="mt-3 text-base leading-7 text-slate-600">
@@ -137,8 +138,8 @@ export default function Home() {
 
       <section className="section-shell pt-0">
         <SectionHeading
-          eyebrow="Industries We Serve"
-          title="Built for Critical Process, Energy, Infrastructure, and Logistics Operations"
+          eyebrow="Industries we serve"
+          title="Built for process, energy, infrastructure, and logistics operations"
         />
         <div className="mt-8 card-shell grid-dot-bg p-7">
           <div className="relative grid gap-3 text-base leading-7 text-slate-700 md:grid-cols-2">
@@ -158,13 +159,13 @@ export default function Home() {
 
       <section className="section-shell pt-0">
         <SectionHeading
-          eyebrow="Why Choose Itechsol"
-          title="Technical Depth with Real Operational Impact"
+          eyebrow="Why choose Itechsol"
+          title="Engineering depth with practical operational impact"
         />
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {differentiators.map((item) => (
             <div key={item} className="card-shell flex items-start gap-3 p-5">
-              <span className="mt-1 text-lg text-teal-700">✔</span>
+              <span className="mt-1 text-lg text-teal-700">*</span>
               <p className="text-base font-semibold text-slate-800">{item}</p>
             </div>
           ))}

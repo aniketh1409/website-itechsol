@@ -17,7 +17,7 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://itechsol.ae"),
+  metadataBase: new URL("https://itechsol-meai.com"),
   title: {
     default: "Itechsol | Innovative Technical Solutions",
     template: "%s | Itechsol",

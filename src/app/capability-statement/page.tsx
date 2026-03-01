@@ -4,19 +4,19 @@ import { PrintButton } from "@/components/print-button";
 import { SectionHeading } from "@/components/section-heading";
 
 const industries = [
-  "Process Industries: Oil & Gas, Gas Processing, Petrochemical, Refining, Distribution",
-  "EPC & Infrastructure Projects",
-  "Process & Manufacturing Industries",
-  "Power, Utilities & Energy Facilities",
-  "Metals & Mining Industries",
-  "Industrial Warehousing, Data Centres & Logistics",
+  "Process industries: Oil and Gas, Gas Processing, Petrochemical, Refining and Multi-Product Pipelines and Distribution",
+  "EPC and Infrastructure Projects",
+  "Process and Manufacturing Industries",
+  "Power, Utilities and Energy Facilities",
+  "Metals and Mining Industries",
+  "Industrial Warehousing, Data Centres and Logistics",
 ];
 
 const coreSolutions = [
   "Advanced Asset Tracking Solutions",
-  "Smart Industrial Locking & Access Management for harsh/hazardous environments",
-  "Intelligent Key/Card Management & Accountability Platforms",
-  "Customized Security & Operational Control Solutions",
+  "Smart Industrial Locking and Access Management for harsh and hazardous environments",
+  "Intelligent Key and Card Management and Accountability Platforms",
+  "Customized Security and Operational Control Solutions",
 ];
 
 const technicalCapabilities = [
@@ -42,8 +42,8 @@ export default function CapabilityStatementPage() {
   return (
     <section className="section-shell">
       <SectionHeading
-        eyebrow="Corporate Capability Statement"
-        title="Two-Page Profile for Customers, Contractors, and EPC Stakeholders"
+        eyebrow="Corporate capability statement"
+        title="Two-page profile for customers, contractors, and EPC stakeholders"
       />
 
       <div className="mt-8 flex flex-wrap gap-3 print:hidden">
@@ -55,8 +55,8 @@ export default function CapabilityStatementPage() {
 
       <article className="capability-page card-shell mt-8 p-7">
         <p className="section-eyebrow">Page 1</p>
-        <h2 className="font-rajdhani mt-2 text-3xl font-bold uppercase text-slate-900">
-          About, Vision, Mission, Industries Served, Core Solutions
+        <h2 className="font-rajdhani mt-2 text-3xl font-bold text-slate-900">
+          About, vision, mission, industries served, and core solutions
         </h2>
 
         <div className="mt-5 space-y-4 text-slate-700">
@@ -67,9 +67,10 @@ export default function CapabilityStatementPage() {
             security.
           </p>
           <p>
-            Our vision is to be a trusted technology partner for industries by
+            Our vision is to become a trusted technology partner for industries,
             delivering intelligent, secure, and scalable solutions that
-            transform operational control and infrastructure protection.
+            transform asset tracking, access management, operational control, and
+            infrastructure protection.
           </p>
           <p>
             Our mission is to improve safety, security, traceability, and
@@ -80,7 +81,7 @@ export default function CapabilityStatementPage() {
 
         <div className="mt-6 grid gap-5 md:grid-cols-2">
           <div>
-            <p className="section-eyebrow">Industries Served</p>
+            <p className="section-eyebrow">Industries served</p>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-700">
               {industries.map((item) => (
                 <li key={item}>{item}</li>
@@ -88,7 +89,7 @@ export default function CapabilityStatementPage() {
             </ul>
           </div>
           <div>
-            <p className="section-eyebrow">Core Solutions</p>
+            <p className="section-eyebrow">Core solutions</p>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-700">
               {coreSolutions.map((item) => (
                 <li key={item}>{item}</li>
@@ -100,13 +101,14 @@ export default function CapabilityStatementPage() {
 
       <article className="capability-page card-shell mt-6 p-7">
         <p className="section-eyebrow">Page 2</p>
-        <h2 className="font-rajdhani mt-2 text-3xl font-bold uppercase text-slate-900">
-          Technical Capabilities, Project Highlights, Contact
+        <h2 className="font-rajdhani mt-2 text-3xl font-bold text-slate-900">
+          Detailed solutions, technical capabilities, project highlights, and
+          contact information
         </h2>
 
         <div className="mt-6 grid gap-5 md:grid-cols-2">
           <div>
-            <p className="section-eyebrow">Technical Capabilities</p>
+            <p className="section-eyebrow">Technical capabilities</p>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-700">
               {technicalCapabilities.map((item) => (
                 <li key={item}>{item}</li>
@@ -114,7 +116,7 @@ export default function CapabilityStatementPage() {
             </ul>
           </div>
           <div>
-            <p className="section-eyebrow">Key Project Highlights</p>
+            <p className="section-eyebrow">Key project highlights</p>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-700">
               {projectHighlights.map((item) => (
                 <li key={item}>{item}</li>
@@ -124,11 +126,11 @@ export default function CapabilityStatementPage() {
         </div>
 
         <div className="mt-6 rounded-xl border border-slate-300 bg-slate-50 p-5 text-slate-700">
-          <p className="section-eyebrow">Contact Information</p>
+          <p className="section-eyebrow">Contact information</p>
           <p className="mt-2">Itechsol, Dubai, UAE</p>
           <p>Phone: +971 4 000 0000</p>
-          <p>Email: info@itechsol.ae</p>
-          <p>Website: www.itechsol.ae</p>
+          <p>Email: info@itechsol-meai.com</p>
+          <p>Website: www.itechsol-meai.com</p>
         </div>
       </article>
     </section>

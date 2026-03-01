@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://itechsol.ae/sitemap.xml",
+    sitemap: "https://itechsol-meai.com/sitemap.xml",
   };
 }

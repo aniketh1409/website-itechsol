@@ -22,7 +22,7 @@ const solutions = [
     bullets: [
       "Configurable access control for sites, data centres, and critical infrastructure.",
       "Smart locks with audit trails for all access events.",
-      "Integration with key management systems and CCTV for centralized control.",
+      "Integration with third party systems for centralized control.",
       "Designed for industrial, harsh, and hazardous environments.",
     ],
     benefits: [
@@ -36,8 +36,8 @@ const solutions = [
     bullets: [
       "Configurable access control for data centres and racks.",
       "Smart locks with audit trails for all access events and remote operations.",
-      "Integration with RTU and SCADA for centralized control.",
-      "Designed for demanding industrial environments.",
+      "Integration with third party systems for centralized control.",
+      "Designed for industrial environments.",
     ],
     benefits: [
       "Enhanced security and restricted access",
@@ -46,9 +46,9 @@ const solutions = [
     ],
   },
   {
-    title: "Intelligent Key & Card Management Solutions",
+    title: "Intelligent Key and Card Management Solutions",
     bullets: [
-      "Digital key tracking and controlled access workflows.",
+      "Digital key tracking and controlled access.",
       "Real-time monitoring of key issuance and returns.",
       "Alerts for overdue or misplaced keys.",
       "Seamless integration with locking systems for complete asset security.",
@@ -64,7 +64,7 @@ const solutions = [
 export const metadata: Metadata = {
   title: "Solutions",
   description:
-    "Explore Itechsol solutions: advanced RFID asset tracking, smart industrial locking, intelligent access management, and digital key/card management.",
+    "Explore Itechsol solutions: advanced RFID asset tracking, smart industrial locking, intelligent access management, and digital key and card management.",
 };
 
 export default function SolutionsPage() {
@@ -72,13 +72,13 @@ export default function SolutionsPage() {
     <section className="section-shell">
       <SectionHeading
         eyebrow="Solutions"
-        title="Engineered Systems for Security, Traceability, and Operational Control"
-        description="Our comprehensive solutions are designed to perform reliably in harsh industrial environments while improving governance and reducing risk."
+        title="Engineered systems for security, traceability, and operational control"
+        description="Our comprehensive solutions are designed to perform reliably in demanding industrial environments, supporting governance, reduced risk, and improved decision-making through real-time visibility."
       />
       <div className="mt-10 grid gap-6">
         {solutions.map((solution) => (
           <article key={solution.title} className="card-shell p-7">
-            <h2 className="font-rajdhani text-3xl font-bold uppercase leading-tight text-slate-900">
+            <h2 className="font-rajdhani text-3xl font-bold leading-tight text-slate-900">
               {solution.title}
             </h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700">
