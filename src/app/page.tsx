@@ -68,26 +68,26 @@ export default function Home() {
   return (
     <>
       <section className="section-shell hero-glow">
-        <div className="section-panel section-panel-dark grid gap-10 p-5 lg:grid-cols-[1.04fr_0.96fr] lg:items-center lg:p-7">
+        <div className="section-panel hero-main-panel grid gap-10 p-5 lg:grid-cols-[1.04fr_0.96fr] lg:items-center lg:p-7">
           <div className="space-y-6 section-fade">
             <p className="section-eyebrow">Engineered industrial control</p>
-            <h1 className="section-title text-white text-[clamp(2.05rem,5.4vw,3.85rem)] leading-[0.96]">
+            <h1 className="section-title text-[clamp(2.05rem,5.4vw,3.85rem)] leading-[0.96] text-slate-900">
               Engineered and intelligent control systems and solutions for
               critical and demanding environments and applications
             </h1>
-            <p className="max-w-3xl text-lg leading-8 text-slate-200">
+            <p className="max-w-3xl text-lg leading-8 text-slate-700">
               Smart Asset Tracking Solutions &bull; Industrial Locking Solutions
               &bull; Intelligent Access Management Solutions &bull; Innovative
               Key and Card Management Solutions
             </p>
-            <p className="text-base font-semibold tracking-[0.04em] text-cyan-200">
+            <p className="text-base font-semibold tracking-[0.04em] text-teal-700">
               Smart Systems. Engineered Solutions. Visible Control. Secure
               Operations.
             </p>
 
             <div className="tag-cloud">
               {featureTags.map((tag) => (
-                <span key={tag} className="tag-chip hero-chip">
+                <span key={tag} className="tag-chip">
                   {tag}
                 </span>
               ))}
