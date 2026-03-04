@@ -2,15 +2,17 @@ type SectionHeadingProps = {
   eyebrow: string;
   title: string;
   description?: string;
+  className?: string;
 };
 
 export function SectionHeading({
   eyebrow,
   title,
   description,
+  className = "",
 }: SectionHeadingProps) {
   return (
-    <div className="max-w-3xl space-y-4">
+    <div className={`max-w-3xl space-y-4 ${className}`}>
       <p className="section-eyebrow">{eyebrow}</p>
       <h2 className="section-title">{title}</h2>
       {description ? (

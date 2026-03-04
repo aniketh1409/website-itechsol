@@ -127,9 +127,9 @@ export default function CapabilityStatementPage() {
 
         <div className="mt-6 rounded-xl border border-slate-300 bg-slate-50 p-5 text-slate-700">
           <p className="section-eyebrow">Contact information</p>
-          <p className="mt-2">Itechsol, Dubai, UAE</p>
-          <p>Phone: +971 4 000 0000</p>
-          <p>Email: info@itechsol-meai.com</p>
+          <p className="mt-2">Itechsol, Bin Brook building hamdan st abu dhabi</p>
+          <p>Phone: +971 55 599 6088</p>
+          <p>Email: sales@itechsol-meai.com</p>
           <p>Website: www.itechsol-meai.com</p>
         </div>
       </article>

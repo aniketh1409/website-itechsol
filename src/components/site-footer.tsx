@@ -3,7 +3,7 @@ import Link from "next/link";
 const quickLinks = [
   { href: "/about", label: "About Us" },
   { href: "/solutions", label: "Our Solutions" },
-  { href: "/projects", label: "Industries & Projects" },
+  { href: "/projects", label: "Industries and Projects" },
   { href: "/capability-statement", label: "Capability Statement" },
   { href: "/contact", label: "Contact" },
 ];
@@ -35,12 +35,12 @@ export function SiteFooter() {
         </div>
         <div className="space-y-3 text-sm text-slate-300">
           <p className="footer-kicker">Reach Us</p>
-          <p>UAE Office, Dubai</p>
-          <a href="tel:+97140000000" className="footer-link">
-            +971 4 000 0000
+          <p>Bin Brook building hamdan st abu dhabi</p>
+          <a href="tel:+971555996088" className="footer-link">
+            +971 55 599 6088
           </a>
-          <a href="mailto:info@itechsol-meai.com" className="footer-link">
-            info@itechsol-meai.com
+          <a href="mailto:sales@itechsol-meai.com" className="footer-link">
+            sales@itechsol-meai.com
           </a>
         </div>
       </div>

@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeading } from "@/components/section-heading";
+import { SpotlightCard } from "@/components/spotlight-card";
+
+const mobileNumber = "+971555996088";
+const displayNumber = "+971 55 599 6088";
+const email = "sales@itechsol-meai.com";
+const locationText = "Bin Brook building hamdan st abu dhabi";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -12,33 +18,34 @@ export default function ContactPage() {
   return (
     <section className="section-shell">
       <SectionHeading
+        className="section-fade"
         eyebrow="Contact us"
         title="Reach Itechsol"
         description="Discuss requirements, request a demo, or send your technical enquiry to our engineering team."
       />
 
       <div className="mt-8 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-        <article className="card-shell space-y-4 p-6 text-slate-700">
+        <SpotlightCard className="card-shell section-fade section-fade-delay-1 space-y-4 p-6 text-slate-700">
           <h2 className="font-rajdhani text-2xl font-bold text-slate-900">
             UAE office
           </h2>
           <p>Innovative Technical Solutions (Itechsol)</p>
-          <p>Dubai, United Arab Emirates</p>
+          <p className="font-medium">{locationText}</p>
           <p>
-            Phone:{" "}
-            <a className="text-teal-700 underline" href="tel:+97140000000">
-              +971 4 000 0000
+            Mobile:{" "}
+            <a className="text-teal-700 underline" href={`tel:${mobileNumber}`}>
+              {displayNumber}
             </a>
           </p>
           <p>
             Email:{" "}
-            <a className="text-teal-700 underline" href="mailto:info@itechsol-meai.com">
-              info@itechsol-meai.com
+            <a className="text-teal-700 underline" href={`mailto:${email}`}>
+              {email}
             </a>
           </p>
           <div className="flex flex-wrap gap-3 pt-2">
             <a
-              href="https://wa.me/97140000000"
+              href={`https://wa.me/${mobileNumber.replace("+", "")}`}
               target="_blank"
               rel="noreferrer"
               className="btn-primary"
@@ -49,9 +56,9 @@ export default function ContactPage() {
               Request a Demo
             </Link>
           </div>
-        </article>
+        </SpotlightCard>
 
-        <article id="enquiry" className="card-shell p-6">
+        <SpotlightCard id="enquiry" className="card-shell section-fade section-fade-delay-2 p-6">
           <h2 className="font-rajdhani text-2xl font-bold text-slate-900">
             Send an inquiry
           </h2>
@@ -87,13 +94,13 @@ export default function ContactPage() {
               Send Inquiry
             </button>
           </form>
-        </article>
+        </SpotlightCard>
       </div>
 
-      <article className="card-shell mt-8 overflow-hidden">
+      <article className="card-shell mt-8 overflow-hidden section-fade section-fade-delay-3">
         <iframe
           title="Itechsol office location map"
-          src="https://www.google.com/maps?q=Dubai%20UAE&output=embed"
+          src="https://www.google.com/maps?q=Bin%20Brook%20Building%20Hamdan%20Street%20Abu%20Dhabi&output=embed"
           className="h-[360px] w-full border-0"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

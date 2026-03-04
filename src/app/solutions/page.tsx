@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeading } from "@/components/section-heading";
+import { SpotlightCard } from "@/components/spotlight-card";
 
 const solutions = [
   {
@@ -71,13 +72,17 @@ export default function SolutionsPage() {
   return (
     <section className="section-shell">
       <SectionHeading
+        className="section-fade"
         eyebrow="Solutions"
         title="Engineered systems for security, traceability, and operational control"
         description="Our comprehensive solutions are designed to perform reliably in demanding industrial environments, supporting governance, reduced risk, and improved decision-making through real-time visibility."
       />
       <div className="mt-10 grid gap-6">
-        {solutions.map((solution) => (
-          <article key={solution.title} className="card-shell p-7">
+        {solutions.map((solution, index) => (
+          <SpotlightCard
+            key={solution.title}
+            className={`card-shell p-7 section-fade section-fade-delay-${(index % 3) + 1}`}
+          >
             <h2 className="font-rajdhani text-3xl font-bold leading-tight text-slate-900">
               {solution.title}
             </h2>
@@ -99,10 +104,10 @@ export default function SolutionsPage() {
                 ))}
               </div>
             </div>
-          </article>
+          </SpotlightCard>
         ))}
       </div>
-      <div className="mt-10 flex flex-wrap gap-3">
+      <div className="mt-10 flex flex-wrap gap-3 section-fade section-fade-delay-2">
         <Link href="/contact#enquiry" className="btn-primary">
           Request a Demo
         </Link>

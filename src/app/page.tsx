@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/section-heading";
+import { SpotlightCard } from "@/components/spotlight-card";
+import { SquaresBackground } from "@/components/squares-background";
 
 const solutionSnapshot = [
   {
@@ -43,16 +45,22 @@ const differentiators = [
   "Scalable solutions for multi-site operations",
 ];
 
+const liveSignals = [
+  "Smart lock events monitored",
+  "RFID traceability insights",
+  "Operational dashboard visibility",
+];
+
 export default function Home() {
   return (
     <>
       <section className="hero-glow">
-        <div className="section-shell grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div className="space-y-6">
+        <div className="section-shell grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="space-y-6 section-fade">
             <p className="section-eyebrow">Engineered industrial control</p>
             <h1 className="section-title text-[clamp(2.1rem,6vw,4rem)] leading-[0.95]">
               Engineered and intelligent control systems and solutions for
-              critical and demanding environment and applications
+              critical and demanding environments and applications
             </h1>
             <p className="max-w-3xl text-lg leading-8 text-slate-700">
               Smart Asset Tracking Solutions &bull; Industrial Locking Solutions
@@ -73,26 +81,23 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="surface-panel overflow-hidden p-3">
-            <div className="relative h-[360px] overflow-hidden rounded-xl">
+          <div className="surface-panel hero-visual section-fade section-fade-delay-1 p-3">
+            <SquaresBackground className="hero-grid-layer" />
+            <div className="hero-image-layer relative h-[360px] overflow-hidden rounded-xl border border-white/20">
               <Image
                 src="/images/industrial-plant.jpg"
-                alt="Industrial refinery with digital overlay concept"
+                alt="Industrial refinery with smart locking and RFID operations"
                 fill
                 priority
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/20 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 grid gap-2 sm:grid-cols-3">
-                <p className="rounded-lg border border-white/25 bg-slate-900/55 px-3 py-2 text-xs text-white">
-                  Smart locks
-                </p>
-                <p className="rounded-lg border border-white/25 bg-slate-900/55 px-3 py-2 text-xs text-white">
-                  RFID tracking
-                </p>
-                <p className="rounded-lg border border-white/25 bg-slate-900/55 px-3 py-2 text-xs text-white">
-                  Dashboard visibility
-                </p>
+                {liveSignals.map((signal) => (
+                  <p key={signal} className="glass-pill">
+                    {signal}
+                  </p>
+                ))}
               </div>
             </div>
           </div>
@@ -101,11 +106,12 @@ export default function Home() {
 
       <section className="section-shell">
         <SectionHeading
+          className="section-fade"
           eyebrow="About Itechsol"
           title="Customized intelligent systems for safety, security, visibility, and operational efficiency"
           description="Itechsol (Innovative Technical Solutions) delivers customized, smart, and intelligent systems that enhance safety, security, visibility, and operational efficiency. Serving various industries, contractors, and customers, our solutions integrate seamlessly into operations to provide measurable value and control."
         />
-        <div className="mt-8">
+        <div className="mt-8 section-fade section-fade-delay-1">
           <Link href="/about" className="btn-secondary">
             Learn More
           </Link>
@@ -114,22 +120,28 @@ export default function Home() {
 
       <section className="section-shell pt-0">
         <SectionHeading
+          className="section-fade"
           eyebrow="Our solutions"
           title="Smart systems for asset traceability, locking, access control, and key governance"
         />
         <div className="mt-8 grid gap-5 md:grid-cols-2">
-          {solutionSnapshot.map((item) => (
-            <article key={item.title} className="card-shell p-6">
+          {solutionSnapshot.map((item, index) => (
+            <SpotlightCard
+              key={item.title}
+              className={`card-shell p-6 section-fade section-fade-delay-${
+                (index % 3) + 1
+              }`}
+            >
               <h3 className="font-rajdhani text-2xl font-bold leading-tight text-slate-900">
                 {item.title}
               </h3>
               <p className="mt-3 text-base leading-7 text-slate-600">
                 {item.description}
               </p>
-            </article>
+            </SpotlightCard>
           ))}
         </div>
-        <div className="mt-8">
+        <div className="mt-8 section-fade section-fade-delay-1">
           <Link href="/solutions" className="btn-primary">
             Explore Our Solutions
           </Link>
@@ -138,10 +150,11 @@ export default function Home() {
 
       <section className="section-shell pt-0">
         <SectionHeading
+          className="section-fade"
           eyebrow="Industries we serve"
           title="Built for process, energy, infrastructure, and logistics operations"
         />
-        <div className="mt-8 card-shell grid-dot-bg p-7">
+        <div className="mt-8 card-shell grid-dot-bg p-7 section-fade section-fade-delay-1">
           <div className="relative grid gap-3 text-base leading-7 text-slate-700 md:grid-cols-2">
             {industries.map((item) => (
               <p key={item} className="rounded-lg bg-white/70 px-4 py-3">
@@ -150,7 +163,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="mt-8">
+        <div className="mt-8 section-fade section-fade-delay-2">
           <Link href="/projects" className="btn-secondary">
             View Case Studies
           </Link>
@@ -159,18 +172,24 @@ export default function Home() {
 
       <section className="section-shell pt-0">
         <SectionHeading
+          className="section-fade"
           eyebrow="Why choose Itechsol"
           title="Engineering depth with practical operational impact"
         />
         <div className="mt-8 grid gap-4 md:grid-cols-2">
-          {differentiators.map((item) => (
-            <div key={item} className="card-shell flex items-start gap-3 p-5">
+          {differentiators.map((item, index) => (
+            <SpotlightCard
+              key={item}
+              className={`card-shell flex items-start gap-3 p-5 section-fade section-fade-delay-${
+                (index % 3) + 1
+              }`}
+            >
               <span className="mt-1 text-lg text-teal-700">*</span>
               <p className="text-base font-semibold text-slate-800">{item}</p>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
-        <div className="mt-8">
+        <div className="mt-8 section-fade section-fade-delay-2">
           <Link href="/contact" className="btn-primary">
             Contact Us Today
           </Link>
