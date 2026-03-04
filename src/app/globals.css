@@ -212,6 +212,19 @@ a {
   background: linear-gradient(145deg, rgba(8, 21, 38, 0.95), rgba(12, 36, 62, 0.9));
 }
 
+.section-panel-dark .section-title {
+  color: #f8fafc;
+  text-shadow: 0 8px 26px rgba(2, 6, 23, 0.45);
+}
+
+.section-panel-dark .section-eyebrow {
+  color: #67e8f9;
+}
+
+.section-panel-dark .section-eyebrow::before {
+  background: #67e8f9;
+}
+
 .section-divider {
   width: 100%;
   height: 1px;
@@ -392,6 +405,33 @@ a {
   font-size: 0.78rem;
   font-weight: 700;
   padding: 0.4rem 0.75rem;
+}
+
+.hero-chip {
+  border-color: rgba(125, 211, 252, 0.28);
+  background: rgba(2, 6, 23, 0.5);
+  color: #d5f6ff;
+}
+
+.hero-metric {
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 0.75rem;
+  background: rgba(2, 6, 23, 0.38);
+  padding: 0.68rem 0.72rem;
+}
+
+.hero-metric b {
+  display: block;
+  color: #99f6e4;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.hero-metric span {
+  color: #dbeafe;
+  font-size: 0.82rem;
+  line-height: 1.35;
 }
 
 .grid-dot-bg {

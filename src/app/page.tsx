@@ -58,6 +58,12 @@ const featureTags = [
   "Operational compliance",
 ];
 
+const heroMetrics = [
+  { label: "Asset intelligence", value: "RFID + IoT visibility" },
+  { label: "Access assurance", value: "Audit-ready access control" },
+  { label: "Operational governance", value: "Centralized control insights" },
+];
+
 export default function Home() {
   return (
     <>
@@ -81,7 +87,7 @@ export default function Home() {
 
             <div className="tag-cloud">
               {featureTags.map((tag) => (
-                <span key={tag} className="tag-chip">
+                <span key={tag} className="tag-chip hero-chip">
                   {tag}
                 </span>
               ))}
@@ -95,10 +101,25 @@ export default function Home() {
                 Contact Our Experts
               </Link>
             </div>
+
+            <div className="mt-2 grid gap-2 sm:grid-cols-3">
+              {heroMetrics.map((metric) => (
+                <div key={metric.label} className="hero-metric">
+                  <b>{metric.label}</b>
+                  <span>{metric.value}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="surface-panel hero-visual section-fade section-fade-delay-1 p-3">
-            <SquaresBackground className="hero-grid-layer" />
+            <SquaresBackground
+              className="hero-grid-layer"
+              speed={0.2}
+              squareSize={52}
+              borderColor="rgba(148, 163, 184, 0.24)"
+              hoverFillColor="rgba(34, 211, 238, 0.16)"
+            />
             <div className="hero-image-layer relative h-[360px] overflow-hidden rounded-xl border border-white/20">
               <Image
                 src="/images/industrial-plant.jpg"
