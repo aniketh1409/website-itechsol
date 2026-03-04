@@ -69,6 +69,13 @@ export default function Home() {
     <>
       <section className="section-shell hero-glow">
         <div className="section-panel hero-main-panel grid gap-10 p-5 lg:grid-cols-[1.04fr_0.96fr] lg:items-center lg:p-7">
+          <SquaresBackground
+            className="hero-panel-grid"
+            speed={0.18}
+            squareSize={56}
+            borderColor="rgba(71, 85, 105, 0.18)"
+            hoverFillColor="rgba(14, 165, 233, 0.12)"
+          />
           <div className="space-y-6 section-fade">
             <p className="section-eyebrow">Engineered industrial control</p>
             <h1 className="section-title text-[clamp(2.05rem,5.4vw,3.85rem)] leading-[0.96] text-slate-900">
@@ -113,13 +120,6 @@ export default function Home() {
           </div>
 
           <div className="surface-panel hero-visual section-fade section-fade-delay-1 p-3">
-            <SquaresBackground
-              className="hero-grid-layer"
-              speed={0.2}
-              squareSize={52}
-              borderColor="rgba(148, 163, 184, 0.24)"
-              hoverFillColor="rgba(34, 211, 238, 0.16)"
-            />
             <div className="hero-image-layer relative h-[360px] overflow-hidden rounded-xl border border-white/20">
               <Image
                 src="/images/industrial-plant.jpg"
