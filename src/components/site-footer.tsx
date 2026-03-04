@@ -35,7 +35,7 @@ export function SiteFooter() {
         </div>
         <div className="space-y-3 text-sm text-slate-300">
           <p className="footer-kicker">Reach Us</p>
-          <p>Bin Brook building hamdan st abu dhabi</p>
+          <p>#41, Bin Brook Building, Hamdan Street, Abu Dhabi, UAE</p>
           <a href="tel:+971555996088" className="footer-link">
             +971 55 599 6088
           </a>

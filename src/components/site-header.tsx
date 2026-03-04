@@ -17,13 +17,13 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
-      <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-4">
+      <div className="header-shell mx-auto w-full max-w-6xl px-6 py-4">
         <Link href="/" className="logo-mark">
           Itechsol
           <span>Innovative Technical Solutions</span>
         </Link>
 
-        <nav className="flex flex-wrap items-center gap-1 text-sm font-semibold tracking-[0.02em]">
+        <nav className="header-nav">
           {navItems.map((item) => {
             const isActive =
               item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);

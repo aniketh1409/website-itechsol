@@ -33,103 +33,123 @@ export default function AboutPage() {
   return (
     <>
       <section className="section-shell">
-        <SectionHeading
-          className="section-fade"
-          eyebrow="About Itechsol"
-          title="Specialized technology solutions for critical industrial operations"
-          description="Itechsol (Innovative Technical Solutions) is a specialized technology solutions provider serving industries and contractors with customized, intelligent systems and solutions designed to strengthen operational processes."
-        />
-        <SpotlightCard className="card-shell section-fade section-fade-delay-1 mt-8 space-y-5 p-7 text-base leading-7 text-slate-700">
-          <p>
-            We deliver engineered and customized solutions across design,
-            engineering, configuration, assembly, testing, commissioning,
-            training, and handover. These solutions address critical challenges
-            related to asset visibility, access control, key management, and
-            infrastructure security, ensuring higher levels of safety,
-            traceability, accountability, and operational efficiency.
-          </p>
-          <p>
-            Understanding the complexity of industrial environments, we adopt a
-            consultative and engineering-driven approach. Our team conducts site
-            surveys and evaluates site conditions, operational workflows,
-            compliance requirements, and risk exposure before designing solutions
-            that integrate seamlessly into existing systems.
-          </p>
-        </SpotlightCard>
-      </section>
+        <div className="section-panel p-5 lg:p-6">
+          <SectionHeading
+            className="section-fade"
+            eyebrow="About Itechsol"
+            title="Specialized technology solutions for critical industrial operations"
+            description="Itechsol (Innovative Technical Solutions) is a specialized technology solutions provider serving industries and contractors with customized, intelligent systems and solutions designed to strengthen operational processes."
+          />
 
-      <section className="section-shell pt-0">
-        <SectionHeading
-          className="section-fade"
-          eyebrow="Our core solutions"
-          title="Comprehensive portfolio for visibility, access, and accountability"
-        />
-        <div className="mt-8 grid gap-5 md:grid-cols-2">
-          {coreSolutions.map((item, index) => (
-            <SpotlightCard
-              key={item}
-              className={`card-shell p-6 text-slate-700 section-fade section-fade-delay-${
-                (index % 3) + 1
-              }`}
-            >
-              {item}
-            </SpotlightCard>
-          ))}
-        </div>
-        <div className="mt-5 grid gap-4 md:grid-cols-2">
-          {portfolioItems.map((item, index) => (
-            <SpotlightCard
-              key={item}
-              className={`rounded-xl border border-slate-300 bg-white p-4 section-fade section-fade-delay-${
-                (index % 3) + 1
-              }`}
-            >
-              <p className="font-semibold text-slate-800">{item}</p>
-            </SpotlightCard>
-          ))}
-        </div>
-      </section>
+          <div className="intro-grid section-fade section-fade-delay-1">
+            <div className="intro-tile">
+              <b>Approach</b>
+              <span>Engineering-led and consultative</span>
+            </div>
+            <div className="intro-tile">
+              <b>Delivery model</b>
+              <span>Design to handover lifecycle support</span>
+            </div>
+          </div>
 
-      <section className="section-shell pt-0">
-        <div className="grid gap-5 md:grid-cols-2">
-          <SpotlightCard className="card-shell p-6 section-fade section-fade-delay-1">
-            <p className="section-eyebrow">Our vision</p>
-            <p className="mt-4 text-base leading-7 text-slate-700">
-              To become a trusted technology partner for industries, delivering
-              intelligent, secure, and scalable solutions that transform asset
-              tracking, access management, operational control, and
-              infrastructure protection.
+          <SpotlightCard className="card-shell section-fade section-fade-delay-1 mt-8 space-y-5 p-7 text-base leading-7 text-slate-700">
+            <p>
+              We deliver engineered and customized solutions across design,
+              engineering, configuration, assembly, testing, commissioning,
+              training, and handover. These solutions address critical challenges
+              related to asset visibility, access control, key management, and
+              infrastructure security, ensuring higher levels of safety,
+              traceability, accountability, and operational efficiency.
             </p>
-          </SpotlightCard>
-          <SpotlightCard className="card-shell p-6 section-fade section-fade-delay-2">
-            <p className="section-eyebrow">Our commitment</p>
-            <p className="mt-4 text-base leading-7 text-slate-700">
-              We help organizations strengthen control, improve traceability,
-              reduce risk, and enhance productivity, turning operational
-              challenges into intelligent and reliable systems.
+            <p>
+              Understanding the complexity of industrial environments, we adopt a
+              consultative and engineering-driven approach. Our team conducts site
+              surveys and evaluates site conditions, operational workflows,
+              compliance requirements, and risk exposure before designing solutions
+              that integrate seamlessly into existing systems.
             </p>
           </SpotlightCard>
         </div>
       </section>
 
       <section className="section-shell pt-0">
-        <SectionHeading
-          className="section-fade"
-          eyebrow="Mission"
-          title="How we deliver measurable value"
-        />
-        <div className="mt-8 grid gap-4">
-          {missionPoints.map((item, index) => (
-            <SpotlightCard
-              key={item}
-              className={`card-shell flex items-start gap-3 p-5 section-fade section-fade-delay-${
-                (index % 3) + 1
-              }`}
-            >
-              <span className="mt-1 text-lg text-teal-700">*</span>
-              <p className="text-slate-700">{item}</p>
+        <div className="section-panel p-5 lg:p-6">
+          <SectionHeading
+            className="section-fade"
+            eyebrow="Our core solutions"
+            title="Comprehensive portfolio for visibility, access, and accountability"
+          />
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
+            {coreSolutions.map((item, index) => (
+              <SpotlightCard
+                key={item}
+                className={`card-shell p-6 text-slate-700 section-fade section-fade-delay-${
+                  (index % 3) + 1
+                }`}
+              >
+                {item}
+              </SpotlightCard>
+            ))}
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            {portfolioItems.map((item, index) => (
+              <SpotlightCard
+                key={item}
+                className={`rounded-xl border border-slate-300 bg-white p-4 section-fade section-fade-delay-${
+                  (index % 3) + 1
+                }`}
+              >
+                <p className="font-semibold text-slate-800">{item}</p>
+              </SpotlightCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-shell pt-0">
+        <div className="section-panel p-5 lg:p-6">
+          <div className="grid gap-5 md:grid-cols-2">
+            <SpotlightCard className="card-shell p-6 section-fade section-fade-delay-1">
+              <p className="section-eyebrow">Our vision</p>
+              <p className="mt-4 text-base leading-7 text-slate-700">
+                To become a trusted technology partner for industries, delivering
+                intelligent, secure, and scalable solutions that transform asset
+                tracking, access management, operational control, and
+                infrastructure protection.
+              </p>
             </SpotlightCard>
-          ))}
+            <SpotlightCard className="card-shell p-6 section-fade section-fade-delay-2">
+              <p className="section-eyebrow">Our commitment</p>
+              <p className="mt-4 text-base leading-7 text-slate-700">
+                We help organizations strengthen control, improve traceability,
+                reduce risk, and enhance productivity, turning operational
+                challenges into intelligent and reliable systems.
+              </p>
+            </SpotlightCard>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-shell pt-0">
+        <div className="section-panel p-5 lg:p-6">
+          <SectionHeading
+            className="section-fade"
+            eyebrow="Mission"
+            title="How we deliver measurable value"
+          />
+          <div className="mt-8 grid gap-4">
+            {missionPoints.map((item, index) => (
+              <SpotlightCard
+                key={item}
+                className={`card-shell flex items-start gap-3 p-5 section-fade section-fade-delay-${
+                  (index % 3) + 1
+                }`}
+              >
+                <span className="mt-1 text-lg text-teal-700">*</span>
+                <p className="text-slate-700">{item}</p>
+              </SpotlightCard>
+            ))}
+          </div>
         </div>
       </section>
     </>

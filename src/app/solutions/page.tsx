@@ -71,49 +71,60 @@ export const metadata: Metadata = {
 export default function SolutionsPage() {
   return (
     <section className="section-shell">
-      <SectionHeading
-        className="section-fade"
-        eyebrow="Solutions"
-        title="Engineered systems for security, traceability, and operational control"
-        description="Our comprehensive solutions are designed to perform reliably in demanding industrial environments, supporting governance, reduced risk, and improved decision-making through real-time visibility."
-      />
-      <div className="mt-10 grid gap-6">
-        {solutions.map((solution, index) => (
-          <SpotlightCard
-            key={solution.title}
-            className={`card-shell p-7 section-fade section-fade-delay-${(index % 3) + 1}`}
-          >
-            <h2 className="font-rajdhani text-3xl font-bold leading-tight text-slate-900">
-              {solution.title}
-            </h2>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700">
-              {solution.bullets.map((bullet) => (
-                <li key={bullet}>{bullet}</li>
-              ))}
-            </ul>
-            <div className="mt-5 border-t border-slate-200 pt-5">
-              <p className="section-eyebrow">Benefits</p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {solution.benefits.map((benefit) => (
-                  <span
-                    key={benefit}
-                    className="rounded-full border border-teal-200 bg-teal-50 px-4 py-1 text-sm font-semibold text-teal-900"
-                  >
-                    {benefit}
-                  </span>
+      <div className="section-panel p-5 lg:p-6">
+        <SectionHeading
+          className="section-fade"
+          eyebrow="Solutions"
+          title="Engineered systems for security, traceability, and operational control"
+          description="Our comprehensive solutions are designed to perform reliably in demanding industrial environments, supporting governance, reduced risk, and improved decision-making through real-time visibility."
+        />
+
+        <div className="tag-cloud mt-5 section-fade section-fade-delay-1">
+          <span className="tag-chip">RFID and IoT</span>
+          <span className="tag-chip">Smart locking</span>
+          <span className="tag-chip">Access management</span>
+          <span className="tag-chip">Key and card accountability</span>
+        </div>
+
+        <div className="mt-10 grid gap-6">
+          {solutions.map((solution, index) => (
+            <SpotlightCard
+              key={solution.title}
+              className={`card-shell p-7 section-fade section-fade-delay-${(index % 3) + 1}`}
+            >
+              <h2 className="font-rajdhani text-3xl font-bold leading-tight text-slate-900">
+                {solution.title}
+              </h2>
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700">
+                {solution.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
                 ))}
+              </ul>
+              <div className="mt-5 border-t border-slate-200 pt-5">
+                <p className="section-eyebrow">Benefits</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {solution.benefits.map((benefit) => (
+                    <span
+                      key={benefit}
+                      className="rounded-full border border-teal-200 bg-teal-50 px-4 py-1 text-sm font-semibold text-teal-900"
+                    >
+                      {benefit}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          </SpotlightCard>
-        ))}
-      </div>
-      <div className="mt-10 flex flex-wrap gap-3 section-fade section-fade-delay-2">
-        <Link href="/contact#enquiry" className="btn-primary">
-          Request a Demo
-        </Link>
-        <Link href="/contact" className="btn-secondary">
-          Talk to Our Experts
-        </Link>
+            </SpotlightCard>
+          ))}
+        </div>
+
+        <div className="mt-10 flex flex-wrap gap-3 section-fade section-fade-delay-2">
+          <Link href="/contact#enquiry" className="btn-primary">
+            Request a Demo
+          </Link>
+          <Link href="/contact" className="btn-secondary">
+            Talk to Our Experts
+          </Link>
+        </div>
       </div>
     </section>
   );

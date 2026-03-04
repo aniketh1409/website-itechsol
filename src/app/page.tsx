@@ -51,26 +51,42 @@ const liveSignals = [
   "Operational dashboard visibility",
 ];
 
+const featureTags = [
+  "Asset visibility",
+  "Access control",
+  "Key accountability",
+  "Operational compliance",
+];
+
 export default function Home() {
   return (
     <>
-      <section className="hero-glow">
-        <div className="section-shell grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+      <section className="section-shell hero-glow">
+        <div className="section-panel section-panel-dark grid gap-10 p-5 lg:grid-cols-[1.04fr_0.96fr] lg:items-center lg:p-7">
           <div className="space-y-6 section-fade">
             <p className="section-eyebrow">Engineered industrial control</p>
-            <h1 className="section-title text-[clamp(2.1rem,6vw,4rem)] leading-[0.95]">
+            <h1 className="section-title text-white text-[clamp(2.05rem,5.4vw,3.85rem)] leading-[0.96]">
               Engineered and intelligent control systems and solutions for
               critical and demanding environments and applications
             </h1>
-            <p className="max-w-3xl text-lg leading-8 text-slate-700">
+            <p className="max-w-3xl text-lg leading-8 text-slate-200">
               Smart Asset Tracking Solutions &bull; Industrial Locking Solutions
               &bull; Intelligent Access Management Solutions &bull; Innovative
               Key and Card Management Solutions
             </p>
-            <p className="text-base font-semibold tracking-[0.04em] text-teal-700">
+            <p className="text-base font-semibold tracking-[0.04em] text-cyan-200">
               Smart Systems. Engineered Solutions. Visible Control. Secure
               Operations.
             </p>
+
+            <div className="tag-cloud">
+              {featureTags.map((tag) => (
+                <span key={tag} className="tag-chip">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
             <div className="flex flex-wrap gap-3">
               <Link href="/contact#enquiry" className="btn-primary">
                 Request a Demo
@@ -91,7 +107,7 @@ export default function Home() {
                 priority
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/22 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 grid gap-2 sm:grid-cols-3">
                 {liveSignals.map((signal) => (
                   <p key={signal} className="glass-pill">
@@ -104,95 +120,104 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell">
-        <SectionHeading
-          className="section-fade"
-          eyebrow="About Itechsol"
-          title="Customized intelligent systems for safety, security, visibility, and operational efficiency"
-          description="Itechsol (Innovative Technical Solutions) delivers customized, smart, and intelligent systems that enhance safety, security, visibility, and operational efficiency. Serving various industries, contractors, and customers, our solutions integrate seamlessly into operations to provide measurable value and control."
-        />
-        <div className="mt-8 section-fade section-fade-delay-1">
-          <Link href="/about" className="btn-secondary">
-            Learn More
-          </Link>
-        </div>
-      </section>
-
       <section className="section-shell pt-0">
-        <SectionHeading
-          className="section-fade"
-          eyebrow="Our solutions"
-          title="Smart systems for asset traceability, locking, access control, and key governance"
-        />
-        <div className="mt-8 grid gap-5 md:grid-cols-2">
-          {solutionSnapshot.map((item, index) => (
-            <SpotlightCard
-              key={item.title}
-              className={`card-shell p-6 section-fade section-fade-delay-${
-                (index % 3) + 1
-              }`}
-            >
-              <h3 className="font-rajdhani text-2xl font-bold leading-tight text-slate-900">
-                {item.title}
-              </h3>
-              <p className="mt-3 text-base leading-7 text-slate-600">
-                {item.description}
-              </p>
-            </SpotlightCard>
-          ))}
-        </div>
-        <div className="mt-8 section-fade section-fade-delay-1">
-          <Link href="/solutions" className="btn-primary">
-            Explore Our Solutions
-          </Link>
-        </div>
-      </section>
-
-      <section className="section-shell pt-0">
-        <SectionHeading
-          className="section-fade"
-          eyebrow="Industries we serve"
-          title="Built for process, energy, infrastructure, and logistics operations"
-        />
-        <div className="mt-8 card-shell grid-dot-bg p-7 section-fade section-fade-delay-1">
-          <div className="relative grid gap-3 text-base leading-7 text-slate-700 md:grid-cols-2">
-            {industries.map((item) => (
-              <p key={item} className="rounded-lg bg-white/70 px-4 py-3">
-                {item}
-              </p>
-            ))}
+        <div className="section-panel p-5 lg:p-6">
+          <SectionHeading
+            className="section-fade"
+            eyebrow="About Itechsol"
+            title="Customized intelligent systems for safety, security, visibility, and operational efficiency"
+            description="Itechsol (Innovative Technical Solutions) delivers customized, smart, and intelligent systems that enhance safety, security, visibility, and operational efficiency. Serving various industries, contractors, and customers, our solutions integrate seamlessly into operations to provide measurable value and control."
+          />
+          <div className="section-divider" />
+          <div className="mt-5 section-fade section-fade-delay-1">
+            <Link href="/about" className="btn-secondary">
+              Learn More
+            </Link>
           </div>
         </div>
-        <div className="mt-8 section-fade section-fade-delay-2">
-          <Link href="/projects" className="btn-secondary">
-            View Case Studies
-          </Link>
+      </section>
+
+      <section className="section-shell pt-0">
+        <div className="section-panel p-5 lg:p-6">
+          <SectionHeading
+            className="section-fade"
+            eyebrow="Our solutions"
+            title="Smart systems for asset traceability, locking, access control, and key governance"
+          />
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
+            {solutionSnapshot.map((item, index) => (
+              <SpotlightCard
+                key={item.title}
+                className={`card-shell p-6 section-fade section-fade-delay-${
+                  (index % 3) + 1
+                }`}
+              >
+                <h3 className="font-rajdhani text-2xl font-bold leading-tight text-slate-900">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-base leading-7 text-slate-600">
+                  {item.description}
+                </p>
+              </SpotlightCard>
+            ))}
+          </div>
+          <div className="mt-8 section-fade section-fade-delay-1">
+            <Link href="/solutions" className="btn-primary">
+              Explore Our Solutions
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="section-shell pt-0">
-        <SectionHeading
-          className="section-fade"
-          eyebrow="Why choose Itechsol"
-          title="Engineering depth with practical operational impact"
-        />
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
-          {differentiators.map((item, index) => (
-            <SpotlightCard
-              key={item}
-              className={`card-shell flex items-start gap-3 p-5 section-fade section-fade-delay-${
-                (index % 3) + 1
-              }`}
-            >
-              <span className="mt-1 text-lg text-teal-700">*</span>
-              <p className="text-base font-semibold text-slate-800">{item}</p>
-            </SpotlightCard>
-          ))}
+        <div className="section-panel p-5 lg:p-6">
+          <SectionHeading
+            className="section-fade"
+            eyebrow="Industries we serve"
+            title="Built for process, energy, infrastructure, and logistics operations"
+          />
+          <div className="mt-8 card-shell grid-dot-bg p-7 section-fade section-fade-delay-1">
+            <div className="relative grid gap-3 text-base leading-7 text-slate-700 md:grid-cols-2">
+              {industries.map((item) => (
+                <p key={item} className="rounded-lg bg-white/70 px-4 py-3">
+                  {item}
+                </p>
+              ))}
+            </div>
+          </div>
+          <div className="mt-8 section-fade section-fade-delay-2">
+            <Link href="/projects" className="btn-secondary">
+              View Case Studies
+            </Link>
+          </div>
         </div>
-        <div className="mt-8 section-fade section-fade-delay-2">
-          <Link href="/contact" className="btn-primary">
-            Contact Us Today
-          </Link>
+      </section>
+
+      <section className="section-shell pt-0">
+        <div className="section-panel p-5 lg:p-6">
+          <SectionHeading
+            className="section-fade"
+            eyebrow="Why choose Itechsol"
+            title="Engineering depth with practical operational impact"
+          />
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {differentiators.map((item, index) => (
+              <SpotlightCard
+                key={item}
+                className={`card-shell flex items-start gap-3 p-5 section-fade section-fade-delay-${
+                  (index % 3) + 1
+                }`}
+              >
+                <span className="mt-1 text-lg text-teal-700">*</span>
+                <p className="text-base font-semibold text-slate-800">{item}</p>
+              </SpotlightCard>
+            ))}
+          </div>
+          <div className="mt-8 section-fade section-fade-delay-2">
+            <Link href="/contact" className="btn-primary">
+              Contact Us Today
+            </Link>
+          </div>
         </div>
       </section>
     </>

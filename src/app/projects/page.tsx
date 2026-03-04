@@ -39,51 +39,56 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <section className="section-shell">
-      <SectionHeading
-        className="section-fade"
-        eyebrow="Industries and projects"
-        title="Deployment experience across critical sectors"
-        description="Itechsol solutions are configured for operational realities in high-compliance, safety-sensitive, and complex industrial sites."
-      />
-      <div className="mt-8 grid gap-4 md:grid-cols-2">
-        {industries.map((industry, index) => (
-          <SpotlightCard
-            key={industry}
-            className={`card-shell p-5 section-fade section-fade-delay-${(index % 3) + 1}`}
-          >
-            <p className="font-semibold text-slate-800">{industry}</p>
-          </SpotlightCard>
-        ))}
-      </div>
-
-      <div className="mt-12">
+      <div className="section-panel p-5 lg:p-6">
         <SectionHeading
           className="section-fade"
-          eyebrow="Capability highlights"
-          title="Representative delivery focus areas"
+          eyebrow="Industries and projects"
+          title="Deployment experience across critical sectors"
+          description="Itechsol solutions are configured for operational realities in high-compliance, safety-sensitive, and complex industrial sites."
         />
-        <div className="mt-8 grid gap-5 md:grid-cols-3">
-          {highlights.map((item, index) => (
+
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+          {industries.map((industry, index) => (
             <SpotlightCard
-              key={item.title}
-              className={`card-shell p-6 section-fade section-fade-delay-${(index % 3) + 1}`}
+              key={industry}
+              className={`card-shell p-5 section-fade section-fade-delay-${(index % 3) + 1}`}
             >
-              <h3 className="font-rajdhani text-2xl font-bold text-slate-900">
-                {item.title}
-              </h3>
-              <p className="mt-3 text-slate-700">{item.description}</p>
+              <p className="font-semibold text-slate-800">{industry}</p>
             </SpotlightCard>
           ))}
         </div>
-      </div>
 
-      <div className="mt-10 flex flex-wrap gap-3 section-fade section-fade-delay-2">
-        <Link href="/contact#enquiry" className="btn-primary">
-          Discuss Your Project
-        </Link>
-        <Link href="/solutions" className="btn-secondary">
-          Explore Solutions
-        </Link>
+        <div className="section-divider" />
+
+        <div className="mt-9">
+          <SectionHeading
+            className="section-fade"
+            eyebrow="Capability highlights"
+            title="Representative delivery focus areas"
+          />
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            {highlights.map((item, index) => (
+              <SpotlightCard
+                key={item.title}
+                className={`card-shell p-6 section-fade section-fade-delay-${(index % 3) + 1}`}
+              >
+                <h3 className="font-rajdhani text-2xl font-bold text-slate-900">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-slate-700">{item.description}</p>
+              </SpotlightCard>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-10 flex flex-wrap gap-3 section-fade section-fade-delay-2">
+          <Link href="/contact#enquiry" className="btn-primary">
+            Discuss Your Project
+          </Link>
+          <Link href="/solutions" className="btn-secondary">
+            Explore Solutions
+          </Link>
+        </div>
       </div>
     </section>
   );

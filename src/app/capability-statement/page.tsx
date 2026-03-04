@@ -41,98 +41,101 @@ export const metadata: Metadata = {
 export default function CapabilityStatementPage() {
   return (
     <section className="section-shell">
-      <SectionHeading
-        eyebrow="Corporate capability statement"
-        title="Two-page profile for customers, contractors, and EPC stakeholders"
-      />
+      <div className="section-panel p-5 lg:p-6">
+        <SectionHeading
+          className="section-fade"
+          eyebrow="Corporate capability statement"
+          title="Two-page profile for customers, contractors, and EPC stakeholders"
+        />
 
-      <div className="mt-8 flex flex-wrap gap-3 print:hidden">
-        <PrintButton />
-        <Link href="/contact#enquiry" className="btn-secondary">
-          Request a Demo
-        </Link>
+        <div className="mt-8 flex flex-wrap gap-3 print:hidden section-fade section-fade-delay-1">
+          <PrintButton />
+          <Link href="/contact#enquiry" className="btn-secondary">
+            Request a Demo
+          </Link>
+        </div>
+
+        <article className="capability-page card-shell mt-8 p-7 section-fade section-fade-delay-1">
+          <p className="section-eyebrow">Page 1</p>
+          <h2 className="font-rajdhani mt-2 text-3xl font-bold text-slate-900">
+            About, vision, mission, industries served, and core solutions
+          </h2>
+
+          <div className="mt-5 space-y-4 text-slate-700">
+            <p>
+              Itechsol (Innovative Technical Solutions) is a specialized
+              technology solutions provider delivering engineered systems for
+              asset visibility, access control, key management, and infrastructure
+              security.
+            </p>
+            <p>
+              Our vision is to become a trusted technology partner for industries,
+              delivering intelligent, secure, and scalable solutions that
+              transform asset tracking, access management, operational control, and
+              infrastructure protection.
+            </p>
+            <p>
+              Our mission is to improve safety, security, traceability, and
+              accountability through commercially viable and easy-to-operate
+              technologies integrated into existing operations.
+            </p>
+          </div>
+
+          <div className="mt-6 grid gap-5 md:grid-cols-2">
+            <div>
+              <p className="section-eyebrow">Industries served</p>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                {industries.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="section-eyebrow">Core solutions</p>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                {coreSolutions.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article className="capability-page card-shell mt-6 p-7 section-fade section-fade-delay-2">
+          <p className="section-eyebrow">Page 2</p>
+          <h2 className="font-rajdhani mt-2 text-3xl font-bold text-slate-900">
+            Detailed solutions, technical capabilities, project highlights, and
+            contact information
+          </h2>
+
+          <div className="mt-6 grid gap-5 md:grid-cols-2">
+            <div>
+              <p className="section-eyebrow">Technical capabilities</p>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                {technicalCapabilities.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="section-eyebrow">Key project highlights</p>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                {projectHighlights.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-6 rounded-xl border border-slate-300 bg-slate-50 p-5 text-slate-700">
+            <p className="section-eyebrow">Contact information</p>
+            <p className="mt-2">Itechsol, #41, Bin Brook Building, Hamdan Street, Abu Dhabi, UAE</p>
+            <p>Phone: +971 55 599 6088</p>
+            <p>Email: sales@itechsol-meai.com</p>
+            <p>Website: www.itechsol-meai.com</p>
+          </div>
+        </article>
       </div>
-
-      <article className="capability-page card-shell mt-8 p-7">
-        <p className="section-eyebrow">Page 1</p>
-        <h2 className="font-rajdhani mt-2 text-3xl font-bold text-slate-900">
-          About, vision, mission, industries served, and core solutions
-        </h2>
-
-        <div className="mt-5 space-y-4 text-slate-700">
-          <p>
-            Itechsol (Innovative Technical Solutions) is a specialized
-            technology solutions provider delivering engineered systems for
-            asset visibility, access control, key management, and infrastructure
-            security.
-          </p>
-          <p>
-            Our vision is to become a trusted technology partner for industries,
-            delivering intelligent, secure, and scalable solutions that
-            transform asset tracking, access management, operational control, and
-            infrastructure protection.
-          </p>
-          <p>
-            Our mission is to improve safety, security, traceability, and
-            accountability through commercially viable and easy-to-operate
-            technologies integrated into existing operations.
-          </p>
-        </div>
-
-        <div className="mt-6 grid gap-5 md:grid-cols-2">
-          <div>
-            <p className="section-eyebrow">Industries served</p>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-700">
-              {industries.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="section-eyebrow">Core solutions</p>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-700">
-              {coreSolutions.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <article className="capability-page card-shell mt-6 p-7">
-        <p className="section-eyebrow">Page 2</p>
-        <h2 className="font-rajdhani mt-2 text-3xl font-bold text-slate-900">
-          Detailed solutions, technical capabilities, project highlights, and
-          contact information
-        </h2>
-
-        <div className="mt-6 grid gap-5 md:grid-cols-2">
-          <div>
-            <p className="section-eyebrow">Technical capabilities</p>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-700">
-              {technicalCapabilities.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="section-eyebrow">Key project highlights</p>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-700">
-              {projectHighlights.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-6 rounded-xl border border-slate-300 bg-slate-50 p-5 text-slate-700">
-          <p className="section-eyebrow">Contact information</p>
-          <p className="mt-2">Itechsol, Bin Brook building hamdan st abu dhabi</p>
-          <p>Phone: +971 55 599 6088</p>
-          <p>Email: sales@itechsol-meai.com</p>
-          <p>Website: www.itechsol-meai.com</p>
-        </div>
-      </article>
     </section>
   );
 }
