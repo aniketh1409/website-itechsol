@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Rajdhani, Source_Sans_3 } from "next/font/google";
+import { Inter } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
-const rajdhani = Rajdhani({
-  variable: "--font-rajdhani",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
-
-const sourceSans = Source_Sans_3({
-  variable: "--font-source-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -47,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sourceSans.variable} ${rajdhani.variable} antialiased`}>
+      <body className={`${inter.variable} antialiased`}>
         <div className="site-shell">
           <SiteHeader />
           <main className="site-main">{children}</main>
