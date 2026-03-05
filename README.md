@@ -1,6 +1,6 @@
-# Itechsol Website
+# iTechSol Website
 
-Small lowkey company site for Itechsol.
+Small lowkey company site for iTechSol.
 
 ## Run locally 
 
@@ -17,3 +17,4 @@ Open `http://localhost:3000`.
 
 - Built with Next.js + TypeScript + Tailwind.
 - Main pages are in `src/app`.
+

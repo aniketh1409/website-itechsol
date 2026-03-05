@@ -26,7 +26,7 @@ const missionPoints = [
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "About Itechsol: engineering-driven technology partner for secure industrial operations, visibility, traceability, and risk reduction.",
+    "About iTechSol: engineering-driven technology partner for secure industrial operations, visibility, traceability, and risk reduction.",
 };
 
 export default function AboutPage() {
@@ -36,9 +36,9 @@ export default function AboutPage() {
         <div className="section-panel p-5 lg:p-6">
           <SectionHeading
             className="section-fade"
-            eyebrow="About Itechsol"
+            eyebrow="About iTechSol"
             title="Specialized technology solutions for critical industrial operations"
-            description="Itechsol (Innovative Technical Solutions) is a specialized technology solutions provider serving industries and contractors with customized, intelligent systems and solutions designed to strengthen operational processes."
+            description="iTechSol (Innovative Technical Solutions) is a specialized technology solutions provider serving industries and contractors with customized, intelligent systems and solutions designed to strengthen operational processes."
           />
 
           <div className="intro-grid section-fade section-fade-delay-1">
@@ -155,3 +155,4 @@ export default function AboutPage() {
     </>
   );
 }
+

@@ -33,7 +33,7 @@ const highlights = [
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Industries served by Itechsol and project capability highlights across process, energy, infrastructure, and logistics operations.",
+    "Industries served by iTechSol and project capability highlights across process, energy, infrastructure, and logistics operations.",
 };
 
 export default function ProjectsPage() {
@@ -44,7 +44,7 @@ export default function ProjectsPage() {
           className="section-fade"
           eyebrow="Industries and projects"
           title="Deployment experience across critical sectors"
-          description="Itechsol solutions are configured for operational realities in high-compliance, safety-sensitive, and complex industrial sites."
+          description="iTechSol solutions are configured for operational realities in high-compliance, safety-sensitive, and complex industrial sites."
         />
 
         <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -93,3 +93,4 @@ export default function ProjectsPage() {
     </section>
   );
 }
+

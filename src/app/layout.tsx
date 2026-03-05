@@ -19,11 +19,11 @@ const sourceSans = Source_Sans_3({
 export const metadata: Metadata = {
   metadataBase: new URL("https://itechsol-meai.com"),
   title: {
-    default: "Itechsol | Innovative Technical Solutions",
-    template: "%s | Itechsol",
+    default: "iTechSol | Innovative Technical Solutions",
+    template: "%s | iTechSol",
   },
   description:
-    "Itechsol delivers smart industrial locking, RFID asset tracking, and intelligent key management systems for EPCs, oil and gas, and process industries in UAE and GCC.",
+    "iTechSol delivers smart industrial locking, RFID asset tracking, and intelligent key management systems for EPCs, oil and gas, and process industries in UAE and GCC.",
   keywords: [
     "Smart industrial locking UAE",
     "RFID asset tracking GCC",
@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     "EPC process industry security solutions",
   ],
   openGraph: {
-    title: "Itechsol | Innovative Technical Solutions",
+    title: "iTechSol | Innovative Technical Solutions",
     description:
       "Engineering intelligent control for critical and demanding operations.",
-    siteName: "Itechsol",
+    siteName: "iTechSol",
     type: "website",
     locale: "en_US",
   },
@@ -57,3 +57,4 @@ export default function RootLayout({
     </html>
   );
 }
+

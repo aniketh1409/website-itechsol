@@ -11,7 +11,7 @@ const locationText = "#41, Bin Brook Building, Hamdan Street, Abu Dhabi, UAE";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Reach Itechsol in UAE for smart industrial locking, RFID asset tracking, and intelligent access and key management solutions.",
+    "Reach iTechSol in UAE for smart industrial locking, RFID asset tracking, and intelligent access and key management solutions.",
 };
 
 export default function ContactPage() {
@@ -21,7 +21,7 @@ export default function ContactPage() {
         <SectionHeading
           className="section-fade"
           eyebrow="Contact us"
-          title="Reach Itechsol"
+          title="Reach iTechSol"
           description="Discuss requirements, request a demo, or send your technical enquiry to our engineering team."
         />
 
@@ -30,7 +30,7 @@ export default function ContactPage() {
             <h2 className="font-rajdhani text-2xl font-bold text-slate-900">
               UAE office
             </h2>
-            <p>Innovative Technical Solutions (Itechsol)</p>
+            <p>Innovative Technical Solutions (iTechSol)</p>
             <p className="font-medium">{locationText}</p>
             <p className="contact-line">
               <strong>Mobile:</strong>
@@ -103,7 +103,7 @@ export default function ContactPage() {
 
         <article className="map-shell card-shell mt-8 overflow-hidden section-fade section-fade-delay-3">
           <iframe
-            title="Itechsol office location map"
+            title="iTechSol office location map"
             src="https://www.google.com/maps?q=%2341%2C%20Bin%20Brook%20Building%2C%20Hamdan%20Street%2C%20Abu%20Dhabi%2C%20UAE&output=embed"
             className="h-[360px] w-full border-0"
             loading="lazy"
@@ -114,3 +114,4 @@ export default function ContactPage() {
     </section>
   );
 }
+

@@ -19,7 +19,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="header-shell mx-auto w-full max-w-6xl px-6 py-4">
         <Link href="/" className="logo-mark">
-          Itechsol
+          iTechSol
           <span>Innovative Technical Solutions</span>
         </Link>
 
@@ -47,3 +47,4 @@ export function SiteHeader() {
     </header>
   );
 }
+

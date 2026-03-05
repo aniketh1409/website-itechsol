@@ -65,7 +65,7 @@ const solutions = [
 export const metadata: Metadata = {
   title: "Solutions",
   description:
-    "Explore Itechsol solutions: advanced RFID asset tracking, smart industrial locking, intelligent access management, and digital key and card management.",
+    "Explore iTechSol solutions: advanced RFID asset tracking, smart industrial locking, intelligent access management, and digital key and card management.",
 };
 
 export default function SolutionsPage() {
@@ -129,3 +129,4 @@ export default function SolutionsPage() {
     </section>
   );
 }
+

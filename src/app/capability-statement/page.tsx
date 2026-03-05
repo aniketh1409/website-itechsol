@@ -35,7 +35,7 @@ const projectHighlights = [
 export const metadata: Metadata = {
   title: "Capability Statement",
   description:
-    "Itechsol corporate capability statement covering solutions, technical strengths, industries served, and contact details.",
+    "iTechSol corporate capability statement covering solutions, technical strengths, industries served, and contact details.",
 };
 
 export default function CapabilityStatementPage() {
@@ -63,7 +63,7 @@ export default function CapabilityStatementPage() {
 
           <div className="mt-5 space-y-4 text-slate-700">
             <p>
-              Itechsol (Innovative Technical Solutions) is a specialized
+              iTechSol (Innovative Technical Solutions) is a specialized
               technology solutions provider delivering engineered systems for
               asset visibility, access control, key management, and infrastructure
               security.
@@ -129,7 +129,7 @@ export default function CapabilityStatementPage() {
 
           <div className="mt-6 rounded-xl border border-slate-300 bg-slate-50 p-5 text-slate-700">
             <p className="section-eyebrow">Contact information</p>
-            <p className="mt-2">Itechsol, #41, Bin Brook Building, Hamdan Street, Abu Dhabi, UAE</p>
+            <p className="mt-2">iTechSol, #41, Bin Brook Building, Hamdan Street, Abu Dhabi, UAE</p>
             <p>Phone: +971 55 599 6088</p>
             <p>Email: sales@itechsol-meai.com</p>
             <p>Website: www.itechsol-meai.com</p>
@@ -139,3 +139,4 @@ export default function CapabilityStatementPage() {
     </section>
   );
 }
+

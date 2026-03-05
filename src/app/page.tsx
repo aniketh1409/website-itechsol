@@ -142,9 +142,9 @@ export default function Home() {
         <div className="section-panel p-5 lg:p-6">
           <SectionHeading
             className="section-fade"
-            eyebrow="About Itechsol"
+            eyebrow="About iTechSol"
             title="Customized intelligent systems for safety, security, visibility, and operational efficiency"
-            description="Itechsol (Innovative Technical Solutions) delivers customized, smart, and intelligent systems that enhance safety, security, visibility, and operational efficiency. Serving various industries, contractors, and customers, our solutions integrate seamlessly into operations to provide measurable value and control."
+            description="iTechSol (Innovative Technical Solutions) delivers customized, smart, and intelligent systems that enhance safety, security, visibility, and operational efficiency. Serving various industries, contractors, and customers, our solutions integrate seamlessly into operations to provide measurable value and control."
           />
           <div className="section-divider" />
           <div className="mt-5 section-fade section-fade-delay-1">
@@ -215,7 +215,7 @@ export default function Home() {
         <div className="section-panel p-5 lg:p-6">
           <SectionHeading
             className="section-fade"
-            eyebrow="Why choose Itechsol"
+            eyebrow="Why choose iTechSol"
             title="Engineering depth with practical operational impact"
           />
           <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -241,3 +241,4 @@ export default function Home() {
     </>
   );
 }
+
