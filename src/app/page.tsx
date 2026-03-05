@@ -72,7 +72,7 @@ export default function Home() {
             <p className="section-eyebrow">Engineered industrial control</p>
             <h1 className="section-title text-[clamp(2.05rem,5.4vw,3.85rem)] leading-[0.96] text-slate-900">
               Delivering engineered, innovative tracking and access control
-              systems, alongside turnkey solutions for critical and demanding
+              systems with turnkey solutions for critical and demanding
               industries and applications.
             </h1>
             <p className="max-w-3xl text-lg leading-8 text-slate-700">
