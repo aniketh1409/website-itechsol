@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/section-heading";
 import { SpotlightCard } from "@/components/spotlight-card";
-import { SquaresBackground } from "@/components/squares-background";
 
 const solutionSnapshot = [
   {
@@ -69,13 +68,6 @@ export default function Home() {
     <>
       <section className="section-shell hero-glow">
         <div className="section-panel hero-main-panel grid gap-10 p-5 lg:grid-cols-[1.04fr_0.96fr] lg:items-center lg:p-7">
-          <SquaresBackground
-            className="hero-panel-grid"
-            speed={0.18}
-            squareSize={56}
-            borderColor="rgba(71, 85, 105, 0.18)"
-            hoverFillColor="rgba(14, 165, 233, 0.12)"
-          />
           <div className="space-y-6 section-fade">
             <p className="section-eyebrow">Engineered industrial control</p>
             <h1 className="section-title text-[clamp(2.05rem,5.4vw,3.85rem)] leading-[0.96] text-slate-900">
@@ -90,6 +82,11 @@ export default function Home() {
             <p className="text-base font-semibold tracking-[0.04em] text-teal-700">
               Smart Systems. Engineered Solutions. Visible Control. Secure
               Operations.
+            </p>
+            <p className="max-w-3xl text-base leading-7 text-slate-700">
+              We deliver engineered, innovative tracking and access control
+              systems, along with turnkey solutions for critical and demanding
+              industries and applications.
             </p>
 
             <div className="tag-cloud">
