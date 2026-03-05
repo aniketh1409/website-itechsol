@@ -50,7 +50,7 @@ export default function RootLayout({
       <body className={`${sourceSans.variable} ${rajdhani.variable} antialiased`}>
         <div className="site-shell">
           <SiteHeader />
-          <main>{children}</main>
+          <main className="site-main">{children}</main>
           <SiteFooter />
         </div>
       </body>
