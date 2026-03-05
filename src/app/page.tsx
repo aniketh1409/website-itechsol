@@ -80,12 +80,8 @@ export default function Home() {
               Key and Card Management Solutions
             </p>
             <p className="text-base font-semibold tracking-[0.04em] text-teal-700">
-              Smart Systems. Engineered Solutions. Visible Control. Secure
-              Operations.
-            </p>
-            <p className="max-w-3xl text-base leading-7 text-slate-700">
-              We deliver engineered, innovative tracking and access control
-              systems, along with turnkey solutions for critical and demanding
+              Delivering engineered, innovative tracking and access control
+              systems, alongside turnkey solutions for critical and demanding
               industries and applications.
             </p>
 
