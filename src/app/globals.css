@@ -265,9 +265,9 @@ a {
 .section-title {
   color: var(--brand-dark);
   font-family: var(--font-inter), sans-serif;
-  font-size: clamp(2rem, 4vw, 2.95rem);
+  font-size: clamp(1.55rem, 3.1vw, 2.2rem);
   font-weight: 700;
-  line-height: 1.03;
+  line-height: 1.12;
 }
 
 .intro-card {
