@@ -733,6 +733,23 @@ a {
   text-transform: uppercase;
 }
 
+.solution-cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid rgba(29, 53, 87, 0.12);
+  padding-top: 1.25rem;
+}
+
+.solution-cta-row__eyebrow {
+  color: #0f766e;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .grid-dot-bg {
   position: relative;
 }
@@ -886,6 +903,11 @@ textarea:focus {
   .rfid-scene__callout {
     min-width: 8rem;
     white-space: normal;
+  }
+
+  .solution-cta-row {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 

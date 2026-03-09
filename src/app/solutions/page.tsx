@@ -7,6 +7,7 @@ const solutions = [
   {
     title: "Advanced Asset Tracking Solutions",
     learnMoreHref: "/solutions/asset-tracking",
+    learnMoreLabel: "View RFID tracking types",
     bullets: [
       "Real-time RFID and IoT-enabled tracking of assets, equipment, and materials.",
       "Complete visibility across yards, manufacturing facilities, warehouses, and industrial sites.",
@@ -115,9 +116,16 @@ export default function SolutionsPage() {
                 </div>
               </div>
               {solution.learnMoreHref ? (
-                <div className="mt-5">
+                <div className="solution-cta-row mt-5">
+                  <div>
+                    <p className="solution-cta-row__eyebrow">Learn more</p>
+                    <p className="text-sm leading-6 text-slate-600">
+                      See portable and fixed RFID reader options, plus in-house and
+                      cloud-based deployments.
+                    </p>
+                  </div>
                   <Link href={solution.learnMoreHref} className="btn-secondary">
-                    Learn More
+                    {solution.learnMoreLabel ?? "Learn More"}
                   </Link>
                 </div>
               ) : null}
