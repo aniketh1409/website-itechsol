@@ -447,6 +447,292 @@ a {
   line-height: 1.35;
 }
 
+.scene-shell {
+  position: relative;
+}
+
+.rfid-scene {
+  position: relative;
+  min-height: 20rem;
+  overflow: hidden;
+  border: 1px solid rgba(29, 53, 87, 0.16);
+  border-radius: 1.15rem;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.3), transparent 28%),
+    linear-gradient(160deg, #071627 0%, #0c2845 55%, #11436e 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  isolation: isolate;
+}
+
+.rfid-scene__mesh {
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.35) 1px, transparent 1px);
+  background-size: 2.8rem 2.8rem;
+}
+
+.rfid-scene__panel-label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 999px;
+  padding: 0.38rem 0.7rem;
+  background: rgba(7, 22, 39, 0.54);
+  color: #c9f7ef;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.rfid-scene__device,
+.rfid-scene__asset {
+  position: absolute;
+  z-index: 1;
+}
+
+.rfid-scene__device {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 22px 35px rgba(3, 7, 18, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.rfid-scene__asset {
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(232, 244, 255, 0.96), rgba(190, 226, 255, 0.84));
+  border: 1px solid rgba(125, 211, 252, 0.5);
+  box-shadow: 0 14px 24px rgba(2, 6, 23, 0.18);
+}
+
+.rfid-scene__asset::before {
+  content: "";
+  position: absolute;
+  inset: 0.5rem;
+  border-radius: 0.7rem;
+  border: 1px dashed rgba(15, 23, 42, 0.14);
+}
+
+.rfid-scene__asset::after {
+  content: "";
+  position: absolute;
+  right: 0.6rem;
+  top: 0.6rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, #34d399 0%, #059669 72%);
+  box-shadow: 0 0 0 0.22rem rgba(52, 211, 153, 0.18);
+}
+
+.rfid-scene--portable .rfid-scene__device {
+  left: 8%;
+  top: 24%;
+  width: 5.8rem;
+  height: 10.8rem;
+  border-radius: 1.35rem;
+  background:
+    linear-gradient(180deg, rgba(207, 250, 254, 0.2), transparent 24%),
+    linear-gradient(180deg, #153552 0%, #0a213a 100%);
+}
+
+.rfid-scene--portable .rfid-scene__device::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 1rem;
+  transform: translateX(-50%);
+  width: 3.2rem;
+  height: 4.7rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(180deg, #9bdaf5 0%, #d9f6ff 100%);
+  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.12);
+}
+
+.rfid-scene--portable .rfid-scene__device::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  width: 2.9rem;
+  height: 3.2rem;
+  border-radius: 0.95rem;
+  background:
+    radial-gradient(circle at 50% 26%, rgba(255, 255, 255, 0.34), transparent 30%),
+    linear-gradient(180deg, #0d2035 0%, #07111e 100%);
+}
+
+.rfid-scene--fixed .rfid-scene__device {
+  left: 11%;
+  bottom: 12%;
+  width: 78%;
+  height: 1rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(148, 163, 184, 0.16), rgba(203, 213, 225, 0.3));
+}
+
+.rfid-scene--fixed .rfid-scene__device::before,
+.rfid-scene--fixed .rfid-scene__device::after {
+  content: "";
+  position: absolute;
+  bottom: 0.4rem;
+  width: 2rem;
+  height: 8.5rem;
+  border-radius: 0.8rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent 16%),
+    linear-gradient(180deg, #274560 0%, #10243a 100%);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+}
+
+.rfid-scene--fixed .rfid-scene__device::before {
+  left: 0;
+}
+
+.rfid-scene--fixed .rfid-scene__device::after {
+  right: 0;
+}
+
+.rfid-scene--portable .rfid-scene__asset--one {
+  right: 12%;
+  top: 19%;
+  width: 7rem;
+  height: 4.7rem;
+}
+
+.rfid-scene--portable .rfid-scene__asset--two {
+  right: 22%;
+  bottom: 16%;
+  width: 8rem;
+  height: 5rem;
+}
+
+.rfid-scene--portable .rfid-scene__asset--three {
+  right: 5%;
+  bottom: 23%;
+  width: 4.6rem;
+  height: 3.8rem;
+}
+
+.rfid-scene--fixed .rfid-scene__asset--one {
+  left: 18%;
+  top: 24%;
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.rfid-scene--fixed .rfid-scene__asset--two {
+  left: 42%;
+  top: 31%;
+  width: 5.6rem;
+  height: 4.8rem;
+}
+
+.rfid-scene--fixed .rfid-scene__asset--three {
+  right: 16%;
+  top: 21%;
+  width: 5rem;
+  height: 6rem;
+}
+
+.rfid-scene__point {
+  position: absolute;
+  z-index: 3;
+  width: 1rem;
+  height: 1rem;
+}
+
+.rfid-scene__pulse {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #5eead4 0%, #14b8a6 100%);
+  box-shadow: 0 0 0 0.3rem rgba(94, 234, 212, 0.16);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.rfid-scene__callout {
+  position: absolute;
+  left: 1.1rem;
+  top: -0.35rem;
+  min-width: max-content;
+  opacity: 0;
+  transform: translateY(0.35rem);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 0.75rem;
+  padding: 0.45rem 0.65rem;
+  background: rgba(3, 10, 20, 0.82);
+  color: #e2f8f4;
+  font-size: 0.74rem;
+  font-weight: 600;
+  box-shadow: 0 14px 24px rgba(2, 6, 23, 0.28);
+}
+
+.rfid-scene__point:hover .rfid-scene__callout,
+.rfid-scene__point:focus-within .rfid-scene__callout {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rfid-scene__point:hover .rfid-scene__pulse,
+.rfid-scene__point:focus-within .rfid-scene__pulse {
+  transform: scale(1.14);
+  box-shadow: 0 0 0 0.42rem rgba(94, 234, 212, 0.18);
+}
+
+.rfid-scene__point--portable-reader {
+  left: 24%;
+  top: 44%;
+}
+
+.rfid-scene__point--portable-asset-a {
+  right: 23%;
+  top: 28%;
+}
+
+.rfid-scene__point--portable-asset-b {
+  right: 28%;
+  bottom: 25%;
+}
+
+.rfid-scene__point--fixed-reader-a {
+  left: 16%;
+  top: 52%;
+}
+
+.rfid-scene__point--fixed-asset {
+  left: 49%;
+  top: 40%;
+}
+
+.rfid-scene__point--fixed-reader-b {
+  right: 18%;
+  top: 48%;
+}
+
+.deployment-card {
+  border: 1px solid rgba(29, 53, 87, 0.14);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(241, 248, 254, 0.94));
+  padding: 1.15rem;
+}
+
+.deployment-card__eyebrow {
+  color: #0f766e;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .grid-dot-bg {
   position: relative;
 }
@@ -591,6 +877,15 @@ textarea:focus {
 
   .intro-grid {
     grid-template-columns: 1fr;
+  }
+
+  .rfid-scene {
+    min-height: 16rem;
+  }
+
+  .rfid-scene__callout {
+    min-width: 8rem;
+    white-space: normal;
   }
 }
 

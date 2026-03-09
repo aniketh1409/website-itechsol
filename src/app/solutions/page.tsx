@@ -6,6 +6,7 @@ import { SpotlightCard } from "@/components/spotlight-card";
 const solutions = [
   {
     title: "Advanced Asset Tracking Solutions",
+    learnMoreHref: "/solutions/asset-tracking",
     bullets: [
       "Real-time RFID and IoT-enabled tracking of assets, equipment, and materials.",
       "Complete visibility across yards, manufacturing facilities, warehouses, and industrial sites.",
@@ -113,6 +114,13 @@ export default function SolutionsPage() {
                   ))}
                 </div>
               </div>
+              {solution.learnMoreHref ? (
+                <div className="mt-5">
+                  <Link href={solution.learnMoreHref} className="btn-secondary">
+                    Learn More
+                  </Link>
+                </div>
+              ) : null}
             </SpotlightCard>
           ))}
         </div>
